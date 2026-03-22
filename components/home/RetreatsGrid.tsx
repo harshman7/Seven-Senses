@@ -52,20 +52,20 @@ function RetreatCard({
             alt={imageAlt}
             fill
             className="object-cover transition-transform duration-[900ms] group-hover:scale-[1.04]"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 450px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
           <div className="absolute inset-0 border border-transparent transition-all duration-700 group-hover:border-gold/30" />
         </div>
 
-        <div className="mt-8 transition-transform duration-500 group-hover:-translate-y-1">
+        <div className="mt-5 md:mt-6 lg:mt-8 transition-transform duration-500 group-hover:-translate-y-1">
           <p className="font-body text-[0.6rem] font-light tracking-[0.25em] uppercase text-charcoal/35">
             {region}
           </p>
-          <h3 className="mt-2 font-serif text-2xl tracking-[0.12em] text-charcoal">
+          <h3 className="mt-1.5 md:mt-2 font-serif text-xl md:text-2xl tracking-[0.12em] text-charcoal">
             {destination}
           </h3>
-          <p className="mt-3 font-body text-sm font-light leading-relaxed text-charcoal/50">
+          <p className="mt-2 md:mt-3 font-body text-sm font-light leading-relaxed text-charcoal/50">
             {tagline}
           </p>
         </div>
@@ -76,28 +76,31 @@ function RetreatCard({
 
 export default function RetreatsPreview() {
   return (
-    <section className="px-8 py-36 lg:px-16 lg:py-52" aria-label="Featured retreats">
+    <section
+      className="px-6 py-24 md:px-10 md:py-32 lg:px-16 lg:py-40 xl:px-20 xl:py-48"
+      aria-label="Featured retreats"
+    >
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-24 max-w-2xl">
+        <div className="mb-16 md:mb-20 lg:mb-24 max-w-2xl">
           <AnimatedText>
             <p className="font-body text-[0.65rem] font-light tracking-[0.25em] uppercase text-sage">
               Signature Experiences
             </p>
           </AnimatedText>
           <AnimatedText delay={0.15}>
-            <h2 className="mt-5 font-serif text-4xl tracking-[0.06em] text-charcoal sm:text-5xl">
+            <h2 className="mt-4 md:mt-5 font-serif text-3xl md:text-4xl lg:text-5xl tracking-[0.06em] text-charcoal">
               Considered Destinations
             </h2>
           </AnimatedText>
           <AnimatedText delay={0.3}>
-            <p className="mt-8 text-[0.95rem] leading-[1.9] text-charcoal/50 max-w-lg">
+            <p className="mt-5 md:mt-6 lg:mt-8 text-[0.9rem] md:text-[0.95rem] leading-[1.85] text-charcoal/50 max-w-lg">
               Six rare destinations, each shaped by landscape, culture, and the unhurried
               art of being present.
             </p>
           </AnimatedText>
         </div>
 
-        <div className="grid gap-x-10 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12 xl:gap-16">
           {featured.map((retreat, i) => (
             <RetreatCard
               key={retreat.slug}
@@ -112,7 +115,7 @@ export default function RetreatsPreview() {
           ))}
         </div>
 
-        <AnimatedText delay={0.2} className="mt-20 text-center">
+        <AnimatedText delay={0.2} className="mt-12 md:mt-16 lg:mt-20 text-center">
           <Button href="/retreats" variant="ghost" ariaLabel="View all retreats">
             View All Destinations
           </Button>

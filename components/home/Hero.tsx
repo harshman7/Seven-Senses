@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative flex h-svh min-h-[700px] items-center justify-center overflow-hidden"
+      className="relative flex h-svh min-h-[500px] md:min-h-[550px] lg:min-h-[600px] items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
       <motion.div className="absolute inset-0" style={{ y }}>
@@ -34,14 +34,14 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative z-10 flex flex-col items-center text-center px-8"
+        className="relative z-10 flex flex-col items-center text-center px-6 md:px-10 lg:px-16 xl:px-20"
         style={{ opacity }}
       >
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-serif text-5xl font-normal tracking-[0.35em] text-linen sm:text-7xl lg:text-8xl"
+          className="font-serif text-4xl font-normal tracking-[0.3em] text-linen sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
         >
           SEVEN SENSES
         </motion.h1>
@@ -54,7 +54,7 @@ export default function Hero() {
             delay: 0.5,
             ease: [0.25, 0.1, 0.25, 1],
           }}
-          className="mt-8 font-serif text-xl italic font-light tracking-[0.12em] text-linen/75 sm:text-2xl lg:text-3xl"
+          className="mt-5 md:mt-6 lg:mt-8 font-serif text-lg italic font-light tracking-[0.12em] text-linen/75 sm:text-xl md:text-2xl lg:text-3xl"
         >
           Where stillness becomes clarity
         </motion.p>
@@ -67,7 +67,7 @@ export default function Hero() {
             delay: 1.0,
             ease: [0.25, 0.1, 0.25, 1],
           }}
-          className="mt-14"
+          className="mt-8 md:mt-10 lg:mt-14"
         >
           <Button
             href="/retreats"
@@ -84,7 +84,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 1.5 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 md:bottom-10 lg:bottom-12 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

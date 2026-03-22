@@ -60,7 +60,7 @@ export default function PhilosophyContent() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[70vh] min-h-[500px] items-end overflow-hidden">
+      <section className="relative flex h-[65vh] min-h-[500px] md:min-h-[550px] lg:min-h-[600px] items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=2940&auto=format&fit=crop"
           alt="Soft morning light filtering through ancient forest canopy"
@@ -71,12 +71,12 @@ export default function PhilosophyContent() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/55 via-charcoal/15 to-transparent" />
 
-        <div className="relative z-10 px-8 pb-20 lg:px-16 lg:pb-28">
+        <div className="relative z-10 px-6 pb-14 md:px-10 md:pb-18 lg:px-16 lg:pb-24 xl:px-20 xl:pb-28">
           <div className="mx-auto max-w-[1400px]">
             <p className="font-body text-[0.65rem] font-light tracking-[0.25em] uppercase text-linen/45">
               Our Philosophy
             </p>
-            <h1 className="mt-4 font-serif text-5xl tracking-[0.15em] text-linen sm:text-6xl lg:text-7xl">
+            <h1 className="mt-3 md:mt-4 font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.15em] text-linen">
               Philosophy
             </h1>
           </div>
@@ -84,20 +84,20 @@ export default function PhilosophyContent() {
       </section>
 
       {/* Opening passage */}
-      <section className="px-8 py-36 lg:px-16 lg:py-52" aria-label="Philosophy introduction">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-20 lg:grid-cols-[1.2fr_1fr] lg:gap-32 lg:items-start">
+      <section className="px-6 py-24 md:px-10 md:py-32 lg:px-16 lg:py-40 xl:px-20 xl:py-48" aria-label="Philosophy introduction">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid gap-12 md:gap-16 lg:grid-cols-[1.2fr_1fr] lg:gap-24 xl:gap-32 lg:items-start">
             <AnimatedText delay={0.1}>
-              <blockquote className="font-serif text-[2rem] italic font-light leading-[1.35] text-charcoal/85 sm:text-[2.4rem] lg:text-[2.8rem]">
+              <blockquote className="font-serif text-[1.75rem] italic font-light leading-[1.35] text-charcoal/85 sm:text-[2rem] md:text-[2.3rem] lg:text-[2.5rem] xl:text-[2.8rem]">
                 &ldquo;We believe that what the world&apos;s most extraordinary people need most
                 is not more — but less. Less noise. Less choice. Less urgency.
                 More presence.&rdquo;
               </blockquote>
             </AnimatedText>
 
-            <div className="space-y-8 lg:pt-16">
+            <div className="space-y-6 md:space-y-8 lg:pt-16">
               <AnimatedText delay={0.35}>
-                <p className="text-[0.95rem] leading-[1.9] text-charcoal/55">
+                <p className="text-[0.9rem] md:text-[0.95rem] leading-[1.85] text-charcoal/55">
                   Seven Senses was born from a conviction that retreat is not indulgence — it is
                   necessity. That the most considered lives deserve experiences shaped with equal
                   consideration. That luxury, at its highest expression, is the gift of
@@ -106,7 +106,7 @@ export default function PhilosophyContent() {
               </AnimatedText>
 
               <AnimatedText delay={0.5}>
-                <p className="text-[0.95rem] leading-[1.9] text-charcoal/55">
+                <p className="text-[0.9rem] md:text-[0.95rem] leading-[1.85] text-charcoal/55">
                   We partner with a rare network of estates, healers, artisans, and scholars who
                   share our devotion to authenticity. Nothing is templated. Nothing is rushed.
                   Each retreat unfolds as a singular encounter — between guest and place, between
@@ -121,28 +121,28 @@ export default function PhilosophyContent() {
       <SectionDivider />
 
       {/* The Seven Pillars */}
-      <section className="px-8 py-36 lg:px-16 lg:py-52" aria-label="The Seven Pillars">
-        <div className="mx-auto max-w-[1200px]">
+      <section className="px-6 py-24 md:px-10 md:py-32 lg:px-16 lg:py-40 xl:px-20 xl:py-48" aria-label="The Seven Pillars">
+        <div className="mx-auto max-w-[1400px]">
           <AnimatedText>
             <p className="font-body text-[0.65rem] font-light tracking-[0.25em] uppercase text-sage">
               The Seven Pillars
             </p>
-            <h2 className="mt-5 font-serif text-4xl tracking-[0.06em] text-charcoal sm:text-5xl">
+            <h2 className="mt-4 md:mt-5 font-serif text-3xl md:text-4xl lg:text-5xl tracking-[0.06em] text-charcoal">
               What Guides Us
             </h2>
           </AnimatedText>
 
-          <div className="mt-28 space-y-28 lg:space-y-36">
-            {pillars.map((pillar, i) => (
+          <div className="mt-16 md:mt-20 lg:mt-28 space-y-16 md:space-y-20 lg:space-y-28 xl:space-y-36">
+            {pillars.map((pillar) => (
               <AnimatedText key={pillar.number} delay={0.1}>
-                <article className="grid gap-8 lg:grid-cols-[100px_220px_1fr] lg:gap-16 lg:items-start">
-                  <span className="font-serif text-6xl font-light text-gold/30 lg:text-7xl">
+                <article className="grid gap-4 md:gap-6 lg:grid-cols-[80px_200px_1fr] lg:gap-12 xl:grid-cols-[100px_220px_1fr] xl:gap-16 lg:items-start">
+                  <span className="font-serif text-5xl md:text-6xl lg:text-7xl font-light text-gold/30">
                     {pillar.number}
                   </span>
-                  <h3 className="font-serif text-3xl tracking-[0.06em] text-charcoal lg:pt-3">
+                  <h3 className="font-serif text-2xl md:text-3xl tracking-[0.06em] text-charcoal lg:pt-3">
                     {pillar.name}
                   </h3>
-                  <p className="text-[0.95rem] leading-[2] text-charcoal/55 lg:pt-3 lg:max-w-2xl">
+                  <p className="text-[0.9rem] md:text-[0.95rem] leading-[1.9] text-charcoal/55 lg:pt-3 lg:max-w-2xl">
                     {pillar.passage}
                   </p>
                 </article>
@@ -155,15 +155,15 @@ export default function PhilosophyContent() {
       <SectionDivider />
 
       {/* CTA */}
-      <section className="px-8 py-40 lg:px-16 lg:py-56" aria-label="Inquire">
+      <section className="px-6 py-32 md:px-10 md:py-40 lg:px-16 lg:py-48 xl:px-20 xl:py-56" aria-label="Inquire">
         <div className="mx-auto max-w-2xl text-center">
           <AnimatedText>
-            <p className="font-serif text-3xl italic font-light leading-relaxed text-charcoal/80 sm:text-4xl sm:leading-relaxed">
+            <p className="font-serif text-2xl md:text-3xl lg:text-4xl italic font-light leading-relaxed text-charcoal/80">
               If this resonates, we would be honoured to hear from you.
             </p>
           </AnimatedText>
           <AnimatedText delay={0.25}>
-            <div className="mt-14">
+            <div className="mt-8 md:mt-10 lg:mt-14">
               <Button href="/inquire" variant="filled" ariaLabel="Inquire about a retreat">
                 Inquire
               </Button>

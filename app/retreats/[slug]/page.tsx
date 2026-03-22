@@ -47,8 +47,8 @@ export default async function RetreatPage({ params }: RetreatPageProps) {
         imageAlt={retreat.imageAlt}
       />
 
-      <section className="px-8 py-28 lg:px-16 lg:py-40">
-        <div className="mx-auto grid max-w-[1200px] gap-20 lg:grid-cols-[1fr_280px] lg:gap-24">
+      <section className="px-6 py-24 md:px-10 md:py-32 lg:px-16 lg:py-40 xl:px-20 xl:py-48">
+        <div className="mx-auto grid max-w-[1400px] gap-12 md:gap-16 lg:grid-cols-[1fr_260px] lg:gap-20 xl:gap-24">
           <RetreatContent retreat={retreat} />
           <RetreatSidebar
             duration={retreat.duration}

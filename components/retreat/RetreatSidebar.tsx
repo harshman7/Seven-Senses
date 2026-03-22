@@ -29,19 +29,19 @@ export default function RetreatSidebar({
       className="hidden lg:block lg:sticky lg:top-32 lg:self-start"
       aria-label="Retreat details"
     >
-      <div className="space-y-10 border-l border-sage/25 pl-10">
+      <div className="space-y-8 xl:space-y-10 border-l border-sage/25 pl-8 xl:pl-10">
         {details.map((detail) => (
           <div key={detail.label}>
             <p className="font-body text-[0.6rem] font-light tracking-[0.2em] uppercase text-charcoal/35">
               {detail.label}
             </p>
-            <p className="mt-2 font-serif text-lg tracking-wide text-charcoal">
+            <p className="mt-2 font-serif text-base xl:text-lg tracking-wide text-charcoal">
               {detail.value}
             </p>
           </div>
         ))}
 
-        <div className="pt-6">
+        <div className="pt-4 xl:pt-6">
           <Button
             href="/inquire"
             variant="filled"

@@ -62,12 +62,12 @@ function SenseItem({ sense, index }: { sense: Sense; index: number }) {
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      className="flex flex-col gap-4 min-w-[280px] lg:min-w-0"
+      className="flex flex-col gap-3 md:gap-4 min-w-[260px] md:min-w-[280px] lg:min-w-0"
     >
-      <span className="font-serif text-5xl font-light text-gold/40 lg:text-6xl">
+      <span className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-gold/40">
         {sense.number}
       </span>
-      <h3 className="font-serif text-2xl tracking-[0.08em] text-charcoal">
+      <h3 className="font-serif text-xl md:text-2xl tracking-[0.08em] text-charcoal">
         {sense.name}
       </h3>
       <p className="font-body text-sm font-light leading-[1.8] text-charcoal/50 max-w-[300px]">
@@ -79,30 +79,33 @@ function SenseItem({ sense, index }: { sense: Sense; index: number }) {
 
 export default function SevenSenses() {
   return (
-    <section className="px-8 py-36 lg:px-16 lg:py-52 bg-linen-dark/40" aria-label="The Seven Senses">
+    <section
+      className="px-6 py-24 md:px-10 md:py-32 lg:px-16 lg:py-40 xl:px-20 xl:py-48 bg-linen-dark/40"
+      aria-label="The Seven Senses"
+    >
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-24">
+        <div className="mb-16 md:mb-20 lg:mb-24">
           <AnimatedText>
             <p className="font-body text-[0.65rem] font-light tracking-[0.25em] uppercase text-sage">
               Our Pillars
             </p>
           </AnimatedText>
           <AnimatedText delay={0.15}>
-            <h2 className="mt-5 font-serif text-4xl tracking-[0.06em] text-charcoal sm:text-5xl">
+            <h2 className="mt-4 md:mt-5 font-serif text-3xl md:text-4xl lg:text-5xl tracking-[0.06em] text-charcoal">
               The Seven Senses
             </h2>
           </AnimatedText>
         </div>
 
         {/* Mobile: horizontal scroll */}
-        <div className="flex gap-12 overflow-x-auto pb-8 scrollbar-hide lg:hidden">
+        <div className="flex gap-8 md:gap-10 overflow-x-auto pb-6 scrollbar-hide lg:hidden">
           {senses.map((sense, i) => (
             <SenseItem key={sense.number} sense={sense} index={i} />
           ))}
         </div>
 
         {/* Desktop: generous grid */}
-        <div className="hidden lg:grid lg:grid-cols-4 lg:gap-x-16 lg:gap-y-24">
+        <div className="hidden lg:grid lg:grid-cols-4 lg:gap-x-12 lg:gap-y-20 xl:gap-x-16 xl:gap-y-24">
           {senses.map((sense, i) => (
             <SenseItem key={sense.number} sense={sense} index={i} />
           ))}

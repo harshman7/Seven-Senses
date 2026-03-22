@@ -29,7 +29,7 @@ export default function RetreatHero({
   return (
     <section
       ref={containerRef}
-      className="relative flex h-[75vh] min-h-[550px] items-end overflow-hidden"
+      className="relative flex h-[65vh] min-h-[500px] md:min-h-[550px] lg:min-h-[600px] items-end overflow-hidden"
       aria-label={`${destination} retreat`}
     >
       <motion.div className="absolute inset-0" style={{ y }}>
@@ -44,7 +44,7 @@ export default function RetreatHero({
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/15 to-transparent" />
       </motion.div>
 
-      <div className="relative z-10 px-8 pb-20 lg:px-16 lg:pb-28">
+      <div className="relative z-10 px-6 pb-14 md:px-10 md:pb-18 lg:px-16 lg:pb-24 xl:px-20 xl:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,10 +54,10 @@ export default function RetreatHero({
           <p className="font-body text-[0.65rem] font-light tracking-[0.25em] uppercase text-linen/45">
             {region}
           </p>
-          <h1 className="mt-4 font-serif text-5xl tracking-[0.15em] text-linen sm:text-6xl lg:text-7xl">
+          <h1 className="mt-3 md:mt-4 font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.15em] text-linen">
             {destination}
           </h1>
-          <p className="mt-5 font-serif text-xl italic font-light text-linen/65 sm:text-2xl">
+          <p className="mt-3 md:mt-4 lg:mt-5 font-serif text-lg md:text-xl lg:text-2xl italic font-light text-linen/65">
             {tagline}
           </p>
         </motion.div>

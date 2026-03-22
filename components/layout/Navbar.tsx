@@ -49,10 +49,10 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-8 lg:px-16">
+        <div className="mx-auto flex h-20 md:h-22 lg:h-24 max-w-[1400px] items-center justify-between px-6 md:px-10 lg:px-16 xl:px-20">
           <Link
             href="/"
-            className={`font-serif text-xl tracking-[0.3em] transition-colors duration-500 ${
+            className={`font-serif text-lg md:text-xl tracking-[0.3em] transition-colors duration-500 ${
               showFrosted ? "text-charcoal" : "text-linen"
             }`}
             aria-label="Seven Senses — Home"
@@ -60,7 +60,7 @@ export default function Navbar() {
             SEVEN SENSES
           </Link>
 
-          <div className="hidden items-center gap-12 md:flex">
+          <div className="hidden items-center gap-8 md:flex lg:gap-12">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
               return (
@@ -109,13 +109,13 @@ export default function Navbar() {
           >
             <button
               onClick={() => setMobileOpen(false)}
-              className="absolute right-8 top-9"
+              className="absolute right-6 top-7"
               aria-label="Close navigation menu"
             >
               <X className="h-6 w-6 text-charcoal" strokeWidth={1.5} />
             </button>
 
-            <nav className="flex flex-col items-center gap-12">
+            <nav className="flex flex-col items-center gap-10">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.label}
@@ -126,7 +126,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-serif text-4xl tracking-[0.15em] text-charcoal"
+                    className="font-serif text-3xl tracking-[0.15em] text-charcoal"
                   >
                     {link.label}
                   </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
               ))}
             </nav>
 
-            <p className="absolute bottom-12 font-body text-[0.65rem] tracking-[0.15em] uppercase text-charcoal/30">
+            <p className="absolute bottom-10 font-body text-[0.65rem] tracking-[0.15em] uppercase text-charcoal/30">
               By invitation and inquiry only
             </p>
           </motion.div>

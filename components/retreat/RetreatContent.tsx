@@ -10,18 +10,18 @@ interface RetreatContentProps {
 
 export default function RetreatContent({ retreat }: RetreatContentProps) {
   return (
-    <div className="space-y-32 lg:space-y-40">
+    <div className="space-y-20 md:space-y-28 lg:space-y-36 xl:space-y-40">
       {/* Overview */}
       <div>
         <AnimatedText>
-          <h2 className="font-serif text-3xl tracking-[0.06em] text-charcoal sm:text-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[0.06em] text-charcoal">
             Overview
           </h2>
         </AnimatedText>
-        <div className="mt-10 space-y-6">
+        <div className="mt-6 md:mt-8 lg:mt-10 space-y-4 md:space-y-6">
           {retreat.overview.map((p, i) => (
             <AnimatedText key={i} delay={0.1 + i * 0.1}>
-              <p className="text-[0.95rem] leading-[2] text-charcoal/55">{p}</p>
+              <p className="text-[0.9rem] md:text-[0.95rem] leading-[1.9] text-charcoal/55">{p}</p>
             </AnimatedText>
           ))}
         </div>
@@ -30,14 +30,14 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
       {/* What's Included */}
       <div>
         <AnimatedText>
-          <h2 className="font-serif text-3xl tracking-[0.06em] text-charcoal sm:text-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[0.06em] text-charcoal">
             What&apos;s Included
           </h2>
         </AnimatedText>
-        <ul className="mt-10 space-y-5">
+        <ul className="mt-6 md:mt-8 lg:mt-10 space-y-3 md:space-y-4 lg:space-y-5">
           {retreat.included.map((item, i) => (
             <AnimatedText key={i} delay={0.05 + i * 0.06}>
-              <li className="flex items-start gap-5 text-[0.95rem] leading-[1.8] text-charcoal/55">
+              <li className="flex items-start gap-4 md:gap-5 text-[0.9rem] md:text-[0.95rem] leading-[1.8] text-charcoal/55">
                 <span className="mt-2.5 block h-1 w-1 flex-shrink-0 rounded-full bg-gold/50" />
                 {item}
               </li>
@@ -49,14 +49,14 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
       {/* The Experience */}
       <div>
         <AnimatedText>
-          <h2 className="font-serif text-3xl tracking-[0.06em] text-charcoal sm:text-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[0.06em] text-charcoal">
             The Experience
           </h2>
         </AnimatedText>
-        <div className="mt-10 space-y-8">
+        <div className="mt-6 md:mt-8 lg:mt-10 space-y-6 md:space-y-8">
           {retreat.experience.map((p, i) => (
             <AnimatedText key={i} delay={0.1 + i * 0.12}>
-              <p className="font-serif text-lg italic font-light leading-[1.8] text-charcoal/65">
+              <p className="font-serif text-base md:text-lg italic font-light leading-[1.8] text-charcoal/65">
                 {p}
               </p>
             </AnimatedText>
@@ -67,14 +67,14 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
       {/* Who This Is For */}
       <div>
         <AnimatedText>
-          <h2 className="font-serif text-3xl tracking-[0.06em] text-charcoal sm:text-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[0.06em] text-charcoal">
             Who This Is For
           </h2>
         </AnimatedText>
-        <ul className="mt-10 space-y-5">
+        <ul className="mt-6 md:mt-8 lg:mt-10 space-y-3 md:space-y-4 lg:space-y-5">
           {retreat.whoIsItFor.map((item, i) => (
             <AnimatedText key={i} delay={0.1 + i * 0.1}>
-              <li className="text-[0.95rem] leading-[1.8] text-charcoal/55">
+              <li className="text-[0.9rem] md:text-[0.95rem] leading-[1.8] text-charcoal/55">
                 {item}
               </li>
             </AnimatedText>
@@ -83,8 +83,8 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
       </div>
 
       {/* Mobile sidebar details */}
-      <div className="lg:hidden border-t border-sage/20 pt-14">
-        <div className="grid grid-cols-3 gap-8">
+      <div className="lg:hidden border-t border-sage/20 pt-10 md:pt-14">
+        <div className="grid grid-cols-3 gap-4 md:gap-8">
           {[
             { label: "Duration", value: retreat.duration },
             { label: "Group Size", value: retreat.groupSize },
@@ -94,7 +94,7 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
               <p className="font-body text-[0.6rem] font-light tracking-[0.2em] uppercase text-charcoal/35">
                 {detail.label}
               </p>
-              <p className="mt-2 font-serif text-base tracking-wide text-charcoal">
+              <p className="mt-1.5 md:mt-2 font-serif text-sm md:text-base tracking-wide text-charcoal">
                 {detail.value}
               </p>
             </div>
@@ -103,16 +103,16 @@ export default function RetreatContent({ retreat }: RetreatContentProps) {
       </div>
 
       {/* Inquire CTA */}
-      <div className="border-t border-sage/20 pt-20 text-center">
+      <div className="border-t border-sage/20 pt-14 md:pt-16 lg:pt-20 text-center">
         <AnimatedText>
-          <h2 className="font-serif text-3xl tracking-[0.06em] text-charcoal sm:text-4xl">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[0.06em] text-charcoal">
             Begin a conversation
           </h2>
-          <p className="mt-6 text-[0.95rem] font-light text-charcoal/50">
+          <p className="mt-4 md:mt-6 text-[0.9rem] md:text-[0.95rem] font-light text-charcoal/50">
             Each retreat is shaped around you. Share your interest and we will be in touch
             within 48 hours.
           </p>
-          <div className="mt-12">
+          <div className="mt-8 md:mt-10 lg:mt-12">
             <Button
               href="/inquire"
               variant="filled"
