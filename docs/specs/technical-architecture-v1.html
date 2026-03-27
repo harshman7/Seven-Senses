@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEVEN SENSES — Ultra-Luxury Bespoke Global Retreats</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#c3c8c1",
+                        "on-secondary-fixed": "#261900",
+                        "surface-tint": "#506353",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e7e2da",
+                        "surface-container-high": "#ece8e0",
+                        "tertiary-fixed-dim": "#cbc5c0",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f2ede5",
+                        "on-tertiary-fixed-variant": "#494643",
+                        "on-primary-fixed-variant": "#394b3c",
+                        "inverse-surface": "#32302b",
+                        "on-secondary-container": "#795f2b",
+                        "secondary-container": "#fedb9b",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b7ccb8",
+                        "surface": "#fef9f1",
+                        "on-tertiary-container": "#33312d",
+                        "tertiary": "#615e5a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#1d1b18",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#9d9893",
+                        "on-surface-variant": "#434843",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#8a9e8c",
+                        "inverse-on-surface": "#f5f0e8",
+                        "background": "#fef9f1",
+                        "primary": "#506353",
+                        "on-secondary-fixed-variant": "#5a4312",
+                        "tertiary-fixed": "#e7e1dc",
+                        "secondary-fixed": "#ffdea4",
+                        "secondary-fixed-dim": "#e4c285",
+                        "secondary": "#745a27",
+                        "on-surface": "#1d1c17",
+                        "primary-fixed": "#d3e8d4",
+                        "surface-variant": "#e7e2da",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f8f3eb",
+                        "surface-bright": "#fef9f1",
+                        "primary-fixed-dim": "#b7ccb8",
+                        "on-primary-container": "#243527",
+                        "outline": "#737872",
+                        "on-primary-fixed": "#0e1f13",
+                        "on-background": "#1d1c17",
+                        "surface-dim": "#ded9d2"
+                    },
+                    fontFamily: {
+                        "headline": ["Cormorant Garamond", "serif"],
+                        "serif-display": ["Cormorant Garamond", "serif"],
+                        "body": ["Jost", "sans-serif"],
+                        "label": ["Jost", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fef9f1;
+            color: #1d1c17;
+            cursor: none;
+        }
+
+        /* Custom Motion Signatures & Interactions */
+        .quiet-transition {
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Staggered Entrance Emulation via CSS */
+        .stagger-load > * {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: unfold 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .stagger-load > *:nth-child(1) { animation-delay: 0.3s; }
+        .stagger-load > *:nth-child(2) { animation-delay: 0.4s; }
+        .stagger-load > *:nth-child(3) { animation-delay: 0.5s; }
+        
+        @keyframes unfold {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ghost Button Interaction */
+        .btn-ghost {
+            transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .btn-ghost:active {
+            transform: scale(0.98);
+        }
+        .btn-ghost:hover {
+            opacity: 0.7;
+        }
+
+        /* Atmospheric Parallax Effect */
+        .parallax-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .parallax-img {
+            transform: scale(1.1);
+            transition: transform 0.1s linear;
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            width: 12px;
+            height: 12px;
+            background: #506353;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), width 0.3s ease, height 0.3s ease;
+            mix-blend-mode: difference;
+        }
+        .cursor-hover {
+            transform: scale(4);
+            background: rgba(80, 99, 83, 0.2) !important;
+            border: 0.5px solid #506353;
+        }
+
+        /* Framer-style Page Transition */
+        .page-fade-in {
+            animation: pageCrossFade 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes pageCrossFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+
+        /* Mobile Navigation Motion */
+        /* 
+           Full-screen curtain overlay: background #F5F0E8
+           Link Typography: Cormorant Garamond, Italic
+           Entrance: 0.8s staggered fade-in with 20px vertical drift
+           Exit: Rhythmic transition via Framer Motion 'AnimatePresence' for seamless removal
+        */
+        .mobile-nav-overlay {
+            background-color: #F5F0E8;
+            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .mobile-nav-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .mobile-nav-open .mobile-nav-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for up to 5 links */
+        .mobile-nav-link:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-nav-link:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-nav-link:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-nav-link:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-nav-link:nth-child(5) { transition-delay: 0.5s; }
+        </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container page-fade-in">
+<!-- Custom Cursor Element -->
+<div id="custom-cursor"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md quiet-transition">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<div class="font-headline text-xl tracking-[0.3em] font-light text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="nav-link font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="#">Philosophy</a>
+<a class="nav-link font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="#">Retreats</a>
+<a class="nav-link font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="#">About</a>
+<a class="nav-link font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="#">Inquire</a>
+</div>
+<div class="md:hidden cursor-pointer">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</div>
+</nav>
+<main class="overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 parallax-wrapper">
+<img alt="Misty mountain landscape" class="parallax-img w-full h-full object-cover grayscale-[20%] opacity-90" id="hero-parallax" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="relative z-10 text-center space-y-8 px-6 stagger-load">
+<h1 class="font-serif-display text-7xl md:text-9xl font-light tracking-[0.2em] text-on-surface uppercase">SEVEN SENSES</h1>
+<p class="font-serif-display italic text-2xl md:text-3xl font-light text-on-surface tracking-wide">Where stillness becomes clarity</p>
+<div class="pt-12">
+<button class="btn-ghost border border-primary px-12 py-4 text-xs uppercase tracking-[0.3em] font-light">Explore Retreats</button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+<span class="text-[10px] uppercase tracking-[0.4em]">Scroll</span>
+<div class="w-[1px] h-12 bg-on-surface animate-bounce"></div>
+</div>
+</section>
+<!-- Container for Max-Width Column -->
+<div class="max-w-[1200px] mx-auto px-8 md:px-12">
+<!-- Philosophy Section -->
+<section class="py-32 md:py-48 flex flex-col md:flex-row gap-16 md:gap-24 items-start">
+<div class="w-full md:w-1/3 stagger-load">
+<span class="text-primary text-xs uppercase tracking-[0.3em] font-medium block mb-8">Our Philosophy</span>
+<h2 class="font-serif-display text-4xl md:text-5xl italic leading-tight text-on-surface">"We do not sell packages. We curate transformations."</h2>
+</div>
+<div class="w-full md:w-2/3 space-y-8 mt-4 stagger-load" style="animation-delay: 0.5s">
+<p class="font-body font-light text-lg leading-relaxed text-on-surface/80">
+                        At Seven Senses, we believe that luxury is not defined by accumulation, but by subtraction. We remove the noise of the modern world to uncover the resonant frequency of your true self. Each journey is a bespoke architectural feat of the soul.
+                    </p>
+<p class="font-body font-light text-lg leading-relaxed text-on-surface/80">
+                        Our experts traverse the globe to find the intersection of wild nature and refined solitude. From limestone isles in warm seas to jungle ridges above the Pacific, your transition into clarity is our singular focus.
+                    </p>
+<div class="pt-8">
+<button class="btn-ghost group relative inline-flex items-center text-xs uppercase tracking-[0.3em] font-light text-primary">
+                            Read More
+                            <span class="absolute -bottom-2 left-0 w-full h-[1px] bg-primary/30 group-hover:bg-primary transition-all duration-500"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Minimal Sage Divider -->
+<div class="py-12">
+<div class="h-[1px] w-11/12 mx-auto bg-primary opacity-20"></div>
+</div>
+<!-- Featured Retreats Section -->
+<section class="py-32 md:py-48">
+<div class="mb-24 text-center stagger-load">
+<span class="text-primary text-xs uppercase tracking-[0.3em] font-medium block mb-4">Signature Experiences</span>
+<h2 class="font-serif-display text-5xl md:text-6xl font-light text-on-surface">Considered Destinations</h2>
+<p class="font-serif-display italic text-xl mt-6 opacity-60">Handpicked sanctuaries across the continents.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+<!-- Card 1: Bali -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-8 relative parallax-wrapper">
+<img alt="Tropical beach and turquoise water" class="parallax-img w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-[2000ms] cubic-bezier(0.22, 1, 0.36, 1)" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<span class="text-xs uppercase tracking-[0.2em] text-primary/60 mb-2 block">Indonesia</span>
+<h3 class="font-serif-display text-3xl font-light mb-3">Bali Solstice</h3>
+<p class="font-body font-light text-sm text-on-surface/60 italic leading-relaxed">Jungle stillness, warm air, and the slow rhythm of the tides.</p>
+</div>
+<!-- Card 2: Costa Rica -->
+<div class="group cursor-pointer mt-0 md:mt-24">
+<div class="aspect-[3/4] overflow-hidden mb-8 relative parallax-wrapper">
+<img alt="Tropical pool and rainforest canopy" class="parallax-img w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-[2000ms] cubic-bezier(0.22, 1, 0.36, 1)" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<span class="text-xs uppercase tracking-[0.2em] text-primary/60 mb-2 block">Costa Rica</span>
+<h3 class="font-serif-display text-3xl font-light mb-3">Nicoya Blue</h3>
+<p class="font-body font-light text-sm text-on-surface/60 italic leading-relaxed">Pacific light, rainforest breath, and long horizons of calm.</p>
+</div>
+<!-- Card 3: Maldives -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden mb-8 relative parallax-wrapper">
+<img alt="Maldives villa" class="parallax-img w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-[2000ms] cubic-bezier(0.22, 1, 0.36, 1)" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<span class="text-xs uppercase tracking-[0.2em] text-primary/60 mb-2 block">Indian Ocean</span>
+<h3 class="font-serif-display text-3xl font-light mb-3">Maldives Blue</h3>
+<p class="font-body font-light text-sm text-on-surface/60 italic leading-relaxed">Weightless restoration in the heart of the ocean.</p>
+</div>
+</div>
+<div class="mt-24 text-center">
+<button class="btn-ghost border border-outline-variant px-12 py-4 text-xs uppercase tracking-[0.3em] font-light">View All Destinations</button>
+</div>
+</section>
+</div>
+<!-- Seven Pillars Section -->
+<section class="bg-[#EBE5D9] py-32 md:py-48">
+<div class="max-w-[1200px] mx-auto px-8 md:px-12">
+<div class="mb-24 stagger-load">
+<span class="text-primary text-xs uppercase tracking-[0.3em] font-medium block mb-4">Our Pillars</span>
+<h2 class="font-serif-display text-5xl md:text-6xl font-light text-on-surface">The Seven Senses</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-24">
+<!-- Pillars 1-7 with subtle entrance delays -->
+<div class="stagger-load" style="animation-delay: 0.1s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">01</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Solitude</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">Space intentionally created to hear the whispers of your own intuition.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.2s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">02</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Nourishment</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">Hyper-local, mineral-rich dining designed for cellular rejuvenation.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.3s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">03</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Movement</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">Somatic exploration through the natural topography of our sanctuaries.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.4s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">04</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Silence</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">The practice of dynamic quietude, where the ego begins to soften.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.5s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">05</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Connection</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">Bespoke interaction with master artisans and local wisdom keepers.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.6s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">06</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Wonder</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">Architecting moments of profound awe to recalibrate your perspective.</p>
+</div>
+<div class="stagger-load" style="animation-delay: 0.7s">
+<span class="font-serif-display text-5xl text-secondary/30 mb-6 block">07</span>
+<h4 class="font-serif-display text-2xl font-light mb-4 uppercase tracking-widest">Restoration</h4>
+<p class="font-body font-light text-on-surface/70 leading-relaxed text-sm">The deep integration of clarity into your post-retreat reality.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="bg-[#1C1A17] py-32 md:py-48 text-surface">
+<div class="max-w-[1200px] mx-auto px-8 md:px-12 text-center stagger-load">
+<span class="text-surface/60 text-xs uppercase tracking-[0.4em] font-light block mb-12">Guest Reflections</span>
+<div class="max-w-3xl mx-auto">
+<h3 class="font-serif-display text-3xl md:text-5xl italic font-light leading-relaxed mb-12">
+                        "The week in Bali was not a holiday; it was a structural shift in my existence. I returned with a silence that I now carry everywhere."
+                    </h3>
+<div class="space-y-2">
+<p class="text-xs uppercase tracking-[0.3em] font-medium text-surface">A.V.H.</p>
+<p class="text-xs italic opacity-40">Ubud, Spring 2024</p>
+</div>
+</div>
+<div class="flex justify-center gap-6 mt-20">
+<div class="w-1.5 h-1.5 bg-surface rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-surface/20 rounded-full"></div>
+<div class="w-1.5 h-1.5 bg-surface/20 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-48 md:py-64 bg-[#F5F0E8]">
+<div class="max-w-3xl mx-auto px-8 text-center stagger-load">
+<h2 class="font-serif-display text-5xl md:text-7xl font-light leading-tight mb-8">
+                    Your retreat begins with <br/> <span class="italic text-primary/80">a conversation.</span>
+</h2>
+<p class="font-body font-light text-lg text-on-surface/60 max-w-xl mx-auto mb-16">
+                    Our experiences are by inquiry only. Each journey is individually tailored to your energetic requirements.
+                </p>
+<button class="btn-ghost bg-[#1C1A17] text-white px-16 py-5 text-xs uppercase tracking-[0.4em] font-light">
+                    Request Invitation
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F0E8] dark:bg-[#1C1A17] quiet-transition">
+<div class="flex flex-col items-center justify-center text-center px-8 w-full py-24 border-t border-[#8A9E8C]/10">
+<div class="font-headline text-2xl tracking-[0.4em] mb-8 text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
+<a class="nav-link font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="#">Philosophy</a>
+<a class="nav-link font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="#">Retreats</a>
+<a class="nav-link font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="#">About</a>
+<a class="nav-link font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="#">Inquire</a>
+<a class="nav-link font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="#">Instagram</a>
+</nav>
+<p class="font-body font-light tracking-widest text-[10px] uppercase text-[#8A9E8C]">By invitation and inquiry only</p>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        const interactiveElements = document.querySelectorAll('button, a, .cursor-pointer, .group');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+
+        // Simple Parallax implementation mimicking Framer useScroll/useTransform
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImg = document.getElementById('hero-parallax');
+            const parallaxImages = document.querySelectorAll('.parallax-img');
+            
+            // Hero parallax: y: -20 to 20
+            const heroY = (scroll / window.innerHeight) * 40 - 20;
+            if (heroImg) heroImg.style.transform = `translateY(${heroY}px) scale(1.1)`;
+
+            // Generic parallax for other images
+            parallaxImages.forEach(img => {
+                if (img.id === 'hero-parallax') return;
+                const rect = img.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+                if (rect.top < viewHeight && rect.bottom > 0) {
+                    const progress = (viewHeight - rect.top) / (viewHeight + rect.height);
+                    const y = progress * 40 - 20;
+                    img.style.transform = `translateY(${y}px) scale(1.1)`;
+                }
+            });
+        });
+    </script>
+</body></html>

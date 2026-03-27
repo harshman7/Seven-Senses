@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#d3e8d4",
+                        "surface-bright": "#fef9f1",
+                        "on-tertiary-container": "#33312d",
+                        "on-secondary-fixed": "#261900",
+                        "surface-container-low": "#f8f3eb",
+                        "on-surface-variant": "#434843",
+                        "on-error-container": "#93000a",
+                        "background": "#fef9f1",
+                        "on-surface": "#1d1c17",
+                        "secondary-fixed-dim": "#e4c285",
+                        "primary": "#506353",
+                        "tertiary-fixed-dim": "#cbc5c0",
+                        "inverse-on-surface": "#f5f0e8",
+                        "inverse-primary": "#b7ccb8",
+                        "surface-tint": "#506353",
+                        "on-background": "#1d1c17",
+                        "tertiary-container": "#9d9893",
+                        "surface-container": "#f2ede5",
+                        "outline": "#737872",
+                        "tertiary": "#615e5a",
+                        "surface-container-high": "#ece8e0",
+                        "on-tertiary-fixed-variant": "#494643",
+                        "surface-dim": "#ded9d2",
+                        "primary-fixed-dim": "#b7ccb8",
+                        "primary-container": "#8a9e8c",
+                        "tertiary-fixed": "#e7e1dc",
+                        "on-primary-fixed": "#0e1f13",
+                        "error": "#ba1a1a",
+                        "surface": "#fef9f1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#5a4312",
+                        "inverse-surface": "#32302b",
+                        "secondary-fixed": "#ffdea4",
+                        "on-primary-fixed-variant": "#394b3c",
+                        "on-tertiary-fixed": "#1d1b18",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#243527",
+                        "surface-variant": "#e7e2da",
+                        "outline-variant": "#c3c8c1",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e7e2da",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#745a27",
+                        "on-secondary-container": "#795f2b",
+                        "secondary-container": "#fedb9b",
+                        "on-tertiary": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Cormorant Garamond", "serif"],
+                        "body": ["Jost", "sans-serif"],
+                        "label": ["Jost", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .staggered-fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+            /* Note: Design request specifies annotations, but CSS is used here for visual structure */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Navigation Drawer Overlay (Active State) -->
+<div class="fixed inset-0 w-full h-full z-[100] bg-[#F5F0E8] dark:bg-[#1C1A17] flex flex-col justify-between items-center px-12 py-16">
+<!-- Top App Bar Content (Integrated into Drawer) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 h-20 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md">
+<div class="flex-1"></div> <!-- Spacer for centering -->
+<div class="font-body text-sm uppercase tracking-[0.3em] text-[#1C1A17] dark:text-[#F5F0E8]">
+                Seven Senses
+            </div>
+<div class="flex-1 flex justify-end">
+<button class="text-[#506353] dark:text-[#8A9E8C] hover:opacity-60 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</header>
+<!-- Main Navigation Links Cluster -->
+<nav class="flex flex-col justify-center items-center h-full space-y-12 w-full pt-20">
+<!-- Navigation Item: Philosophy -->
+<div class="group cursor-pointer hover:translate-x-2 transition-transform duration-500 ease-out text-center">
+<a class="font-headline font-light tracking-wide text-3xl italic text-[#1C1A17]/70 dark:text-[#F5F0E8]/70 hover:text-[#506353]" href="#">
+                    Philosophy
+                </a>
+<!-- Motion Annotation Indicator -->
+<div class="mt-2 text-[8px] uppercase tracking-[0.2em] text-[#506353]/40 font-label">Staggered Entry 01</div>
+</div>
+<!-- Navigation Item: Retreats (Active State Example) -->
+<div class="group cursor-pointer hover:translate-x-2 transition-transform duration-500 ease-out text-center">
+<a class="font-headline font-light tracking-wide text-3xl italic text-[#506353] dark:text-[#8A9E8C] underline decoration-[0.5px] underline-offset-8" href="#">
+                    Retreats
+                </a>
+<div class="mt-2 text-[8px] uppercase tracking-[0.2em] text-[#506353]/40 font-label">Staggered Entry 02</div>
+</div>
+<!-- Navigation Item: Journal -->
+<div class="group cursor-pointer hover:translate-x-2 transition-transform duration-500 ease-out text-center">
+<a class="font-headline font-light tracking-wide text-3xl italic text-[#1C1A17]/70 dark:text-[#F5F0E8]/70 hover:text-[#506353]" href="#">
+                    Journal
+                </a>
+<div class="mt-2 text-[8px] uppercase tracking-[0.2em] text-[#506353]/40 font-label">Staggered Entry 03</div>
+</div>
+<!-- Navigation Item: About -->
+<div class="group cursor-pointer hover:translate-x-2 transition-transform duration-500 ease-out text-center">
+<a class="font-headline font-light tracking-wide text-3xl italic text-[#1C1A17]/70 dark:text-[#F5F0E8]/70 hover:text-[#506353]" href="#">
+                    About
+                </a>
+<div class="mt-2 text-[8px] uppercase tracking-[0.2em] text-[#506353]/40 font-label">Staggered Entry 04</div>
+</div>
+<!-- Navigation Item: Inquire -->
+<div class="group cursor-pointer hover:translate-x-2 transition-transform duration-500 ease-out text-center">
+<a class="font-headline font-light tracking-wide text-3xl italic text-[#1C1A17]/70 dark:text-[#F5F0E8]/70 hover:text-[#506353]" href="#">
+                    Inquire
+                </a>
+<div class="mt-2 text-[8px] uppercase tracking-[0.2em] text-[#506353]/40 font-label">Staggered Entry 05</div>
+</div>
+</nav>
+<!-- Brand Footer Anchor -->
+<footer class="w-full flex justify-center pb-8">
+<div class="font-body text-xl uppercase tracking-[0.2em] text-[#506353] dark:text-[#8A9E8C]">
+                SEVEN SENSES
+            </div>
+</footer>
+</div>
+<!-- Background Content (Hidden but semantic structure for context) -->
+<main class="min-h-screen p-8 bg-surface opacity-20 pointer-events-none">
+<section class="max-w-md mx-auto py-24 space-y-16">
+<div class="aspect-[3/4] bg-surface-container-high relative overflow-hidden">
+<img alt="Minimalist wellness retreat interior" class="object-cover w-full h-full grayscale-[20%]" data-alt="Calm spa interior with neutral linen and natural light" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<h1 class="font-headline font-light text-5xl leading-tight">Finding stillness in the modern world.</h1>
+<p class="font-body font-light text-on-surface-variant leading-relaxed">
+                A curated journey through the senses, designed to restore balance and cultivate a deep sense of presence.
+            </p>
+</section>
+</main>
+</body></html>

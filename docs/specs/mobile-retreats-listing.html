@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f8f3eb",
+              "outline-variant": "#c3c8c1",
+              "on-secondary-container": "#795f2b",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#434843",
+              "on-background": "#1d1c17",
+              "inverse-surface": "#32302b",
+              "surface-dim": "#ded9d2",
+              "on-primary-container": "#243527",
+              "inverse-primary": "#b7ccb8",
+              "background": "#fef9f1",
+              "on-tertiary-container": "#33312d",
+              "surface-bright": "#fef9f1",
+              "error": "#ba1a1a",
+              "primary-container": "#8a9e8c",
+              "error-container": "#ffdad6",
+              "surface-tint": "#506353",
+              "primary": "#506353",
+              "surface": "#fef9f1",
+              "on-secondary": "#ffffff",
+              "outline": "#737872",
+              "inverse-on-surface": "#f5f0e8",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#f2ede5",
+              "surface-container-high": "#ece8e0",
+              "on-secondary-fixed": "#261900",
+              "tertiary-container": "#9d9893",
+              "surface-variant": "#e7e2da",
+              "surface-container-highest": "#e7e2da",
+              "on-surface": "#1d1c17",
+              "secondary": "#745a27",
+              "tertiary": "#615e5a",
+              "on-tertiary-fixed": "#1d1b18"
+            },
+            fontFamily: {
+              "serif": ["Cormorant Garamond", "serif"],
+              "sans": ["Jost", "sans-serif"],
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Jost", "sans-serif"],
+              "label": ["Jost", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #F5F0E8; /* Specific request fallback */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F5F0E8] text-on-surface font-sans antialiased">
+<!-- TopAppBar - Predicted Component -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 scale-100 active:scale-95 transition-transform" data-icon="menu">menu</span>
+</div>
+<h1 class="text-xl tracking-[0.3em] font-light text-emerald-900 dark:text-emerald-50 font-serif uppercase">SEVEN SENSES</h1>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-100 scale-100 active:scale-95 transition-transform" data-icon="search">search</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-md mx-auto">
+<!-- Editorial Header -->
+<section class="mb-20 text-center">
+<span class="font-sans text-[10px] tracking-[0.3rem] text-primary uppercase mb-4 block">Collection 2024</span>
+<h2 class="font-serif font-light italic text-4xl text-on-surface leading-tight">Private Retreats</h2>
+<div class="w-12 h-[1px] bg-primary mx-auto mt-8"></div>
+</section>
+<!-- Retreats Grid (Single Column) -->
+<div class="space-y-24">
+<!-- Bali Card -->
+<article class="relative group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Tropical beach and turquoise lagoon" class="w-full h-full object-cover grayscale-[20%] transition-transform duration-700 group-hover:scale-105" data-alt="Tropical beach and turquoise lagoon" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="flex flex-col items-start">
+<span class="font-sans text-[10px] tracking-[0.2rem] text-stone-500 uppercase mb-2">Island Calm — Indonesia</span>
+<h3 class="font-serif text-3xl font-light text-on-surface mb-4">Bali</h3>
+<p class="font-sans font-light text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Warm air, rice terraces, and slow evenings by the water—a dialogue between jungle and tide.
+                    </p>
+<a class="font-sans text-[11px] tracking-[0.2rem] text-primary border-b border-primary/30 pb-1 uppercase hover:border-primary transition-colors" href="#">Experience Silence</a>
+</div>
+</article>
+<!-- Costa Rica Card -->
+<article class="relative group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Infinity pool overlooking tropical rainforest" class="w-full h-full object-cover grayscale-[20%] transition-transform duration-700 group-hover:scale-105" data-alt="Infinity pool overlooking tropical rainforest" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="flex flex-col items-start">
+<span class="font-sans text-[10px] tracking-[0.2rem] text-stone-500 uppercase mb-2">Pacific Rim — Costa Rica</span>
+<h3 class="font-serif text-3xl font-light text-on-surface mb-4">Nicoya</h3>
+<p class="font-sans font-light text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Rainforest trails, empty coves, and architecture that disappears into the canopy.
+                    </p>
+<a class="font-sans text-[11px] tracking-[0.2rem] text-primary border-b border-primary/30 pb-1 uppercase hover:border-primary transition-colors" href="#">Witness the Wild</a>
+</div>
+</article>
+<!-- Maldives Card -->
+<article class="relative group">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Overwater villa in Maldives" class="w-full h-full object-cover grayscale-[20%] transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist luxury overwater villa on clear ocean water" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="flex flex-col items-start">
+<span class="font-sans text-[10px] tracking-[0.2rem] text-stone-500 uppercase mb-2">Liquid Horizon — Baa Atoll</span>
+<h3 class="font-serif text-3xl font-light text-on-surface mb-4">Maldives</h3>
+<p class="font-sans font-light text-sm text-on-surface-variant leading-relaxed mb-6">
+                        A private island designed around the movement of the tides and the clarity of the soul.
+                    </p>
+<a class="font-sans text-[11px] tracking-[0.2rem] text-primary border-b border-primary/30 pb-1 uppercase hover:border-primary transition-colors" href="#">Drift Away</a>
+</div>
+</article>
+</div>
+<!-- Pagination/Footer Context -->
+<footer class="mt-32 mb-12 text-center">
+<p class="font-serif italic text-stone-400 mb-8">More arrivals soon</p>
+<div class="flex justify-center space-x-4">
+<button class="w-2 h-2 rounded-full bg-primary"></button>
+<button class="w-2 h-2 rounded-full bg-stone-300"></button>
+<button class="w-2 h-2 rounded-full bg-stone-300"></button>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar - Predicted Component -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-stone-50/90 dark:bg-stone-900/90 backdrop-blur-md border-t border-stone-200/20 dark:border-stone-800/20 z-50">
+<!-- EXPLORE (Active) -->
+<a class="flex flex-col items-center justify-center text-emerald-900 dark:text-emerald-50 border-t border-emerald-900 dark:border-emerald-50 pt-2 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="square_foot">square_foot</span>
+<span class="font-sans text-[10px] tracking-[0.2em] font-light uppercase mt-1">EXPLORE</span>
+</a>
+<!-- JOURNAL -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 pt-2 transition-all duration-300 ease-in-out hover:text-emerald-600 dark:hover:text-emerald-300" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[10px] tracking-[0.2em] font-light uppercase mt-1">JOURNAL</span>
+</a>
+<!-- SAVED -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 pt-2 transition-all duration-300 ease-in-out hover:text-emerald-600 dark:hover:text-emerald-300" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark_border">bookmark_border</span>
+<span class="font-sans text-[10px] tracking-[0.2em] font-light uppercase mt-1">SAVED</span>
+</a>
+<!-- PROFILE -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 pt-2 transition-all duration-300 ease-in-out hover:text-emerald-600 dark:hover:text-emerald-300" href="#">
+<span class="material-symbols-outlined" data-icon="person_2">person_2</span>
+<span class="font-sans text-[10px] tracking-[0.2em] font-light uppercase mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

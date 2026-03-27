@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffdea4",
+              "tertiary-fixed": "#e7e1dc",
+              "primary-container": "#8a9e8c",
+              "background": "#fef9f1",
+              "inverse-on-surface": "#f5f0e8",
+              "on-background": "#1d1c17",
+              "surface-container-high": "#ece8e0",
+              "surface-bright": "#fef9f1",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface": "#fef9f1",
+              "outline": "#737872",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#434843",
+              "on-primary-container": "#243527",
+              "primary-fixed-dim": "#b7ccb8",
+              "on-surface": "#1d1c17",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fedb9b",
+              "surface-dim": "#ded9d2",
+              "on-primary-fixed": "#0e1f13",
+              "inverse-surface": "#32302b",
+              "secondary-fixed-dim": "#e4c285",
+              "on-secondary-container": "#795f2b",
+              "outline-variant": "#c3c8c1",
+              "surface-container-highest": "#e7e2da",
+              "on-secondary-fixed": "#261900",
+              "on-primary-fixed-variant": "#394b3c",
+              "surface-container": "#f2ede5",
+              "on-secondary-fixed-variant": "#5a4312",
+              "error-container": "#ffdad6",
+              "primary": "#506353",
+              "on-tertiary-fixed": "#1d1b18",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#cbc5c0",
+              "tertiary-container": "#9d9893",
+              "surface-tint": "#506353",
+              "surface-container-low": "#f8f3eb",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#494643",
+              "tertiary": "#615e5a",
+              "secondary": "#745a27",
+              "primary-fixed": "#d3e8d4",
+              "on-tertiary-container": "#33312d",
+              "inverse-primary": "#b7ccb8"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Jost", "sans-serif"],
+              "label": ["Jost", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+        }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .text-label-caps {
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            font-size: 0.75rem;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-bottom-color: #745a27 !important; /* Secondary Gold */
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md" aria-label="Primary">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<a class="font-headline text-xl tracking-[0.3em] font-light text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html">SEVEN SENSES</a>
+<div class="hidden md:flex gap-10 items-center flex-wrap justify-end">
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../retreats/index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../sustainability/index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-100 border-b border-[#8A9E8C]/40 pb-0.5 hover:text-[#8A9E8C] transition-colors duration-500" href="index.html">Inquire</a>
+</div>
+<button type="button" class="md:hidden p-2 -mr-2 text-[#1C1A17] dark:text-[#F5F0E8]" data-ss-nav-toggle aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<div class="hidden md:hidden fixed inset-0 top-[5.5rem] z-40 flex-col items-center gap-8 pt-16 pb-12 bg-[#F5F0E8] dark:bg-[#1C1A17] border-t border-[#8A9E8C]/10 overflow-y-auto" data-ss-nav-panel>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../retreats/index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../sustainability/index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="index.html">Inquire</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../privacy.html">Privacy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../terms.html">Terms</a>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center px-6 py-24 bg-surface-container-low">
+<span class="text-label-caps text-primary mb-6">Request an Invitation</span>
+<h1 class="text-5xl md:text-7xl font-light italic mb-8 tracking-tight">Begin Your Journey</h1>
+<p class="max-w-2xl text-lg font-light leading-relaxed text-on-surface-variant">
+                We believe in the power of curation and intention. To ensure every retreat remains a sanctuary, we invite you to start a dialogue with our concierge.
+            </p>
+</section>
+<!-- Form Section -->
+<section class="bg-surface py-24">
+<div class="max-w-3xl mx-auto px-6">
+<div class="mb-20 text-center">
+<h2 class="text-3xl font-light mb-4">A Conversation Awaits</h2>
+<div class="w-12 h-[1px] bg-primary mx-auto"></div>
+</div>
+<form class="space-y-20" data-ss-inquiry>
+<!-- Personal Details -->
+<div class="space-y-12">
+<h3 class="text-label-caps text-primary/60 border-b border-outline-variant/20 pb-2">01. Personal Details</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+<div class="group relative">
+<label class="text-label-caps block mb-4" for="name">Full Name</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-on-surface/20 py-2 focus:ring-0 px-0 placeholder:text-on-surface/30 font-light" id="name" name="name" placeholder="How shall we address you?" type="text"/>
+</div>
+<div class="group relative">
+<label class="text-label-caps block mb-4" for="email">Email Address</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-on-surface/20 py-2 focus:ring-0 px-0 placeholder:text-on-surface/30 font-light" id="email" name="email" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+</div>
+<!-- Preferred Destinations -->
+<div class="space-y-12 py-16 px-8 md:-mx-8 bg-surface-container">
+<h3 class="text-label-caps text-primary/60 border-b border-outline-variant/20 pb-2">02. Preferred Destinations</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Amalfi Coast, Italy"/>
+<span class="font-light tracking-wide">Amalfi Coast, Italy</span>
+</label>
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Nicoya Peninsula, Costa Rica"/>
+<span class="font-light tracking-wide">Nicoya Peninsula, Costa Rica</span>
+</label>
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Ubud, Bali"/>
+<span class="font-light tracking-wide">Ubud, Bali</span>
+</label>
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Atlas Mountains, Morocco"/>
+<span class="font-light tracking-wide">Atlas Mountains, Morocco</span>
+</label>
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Scottish Highlands"/>
+<span class="font-light tracking-wide">Scottish Highlands</span>
+</label>
+<label class="flex items-center space-x-4 cursor-pointer">
+<input class="rounded-none border-outline text-primary focus:ring-primary w-5 h-5 bg-transparent" name="destination" type="checkbox" value="Not decided yet"/>
+<span class="font-light tracking-wide">Not decided yet</span>
+</label>
+</div>
+</div>
+<!-- Seeking -->
+<div class="space-y-12">
+<h3 class="text-label-caps text-primary/60 border-b border-outline-variant/20 pb-2">03. Intent</h3>
+<div class="group relative">
+<label class="text-label-caps block mb-4" for="seeking">Tell us what you're seeking</label>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-on-surface/20 py-2 focus:ring-0 px-0 placeholder:text-on-surface/30 font-light resize-none" id="seeking" name="seeking" placeholder="Describe the energy, the purpose, or the specific peace you desire..." rows="4"></textarea>
+</div>
+</div>
+<!-- Submit -->
+<div class="pt-12 flex flex-col items-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-16 py-5 text-label-caps tracking-[0.2em] hover:opacity-90 transition-opacity" type="submit">
+                            Submit Request
+                        </button>
+<p class="mt-8 text-[11px] text-label-caps text-on-surface/40 max-w-xs text-center leading-relaxed">
+                            Responses are personally handled by our curators within 48 hours.
+                        </p>
+</div>
+</form>
+<div class="hidden text-center py-16 px-6" id="ss-inquiry-success">
+<p class="text-2xl font-light mb-4">Your message is ready to send.</p>
+<p class="text-on-surface-variant font-light max-w-md mx-auto">If your email app opened, send the draft to reach our concierge. You can also email <a class="text-primary underline" href="mailto:concierge@sevensenses.com">concierge@sevensenses.com</a> directly.</p>
+<p class="mt-10"><a class="text-label-caps text-primary border-b border-primary pb-1" href="../home/index.html">Return home</a></p>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="py-32 bg-surface-container-high flex justify-center items-center text-center px-6">
+<div class="max-w-lg">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">spa</span>
+<p class="font-headline text-3xl italic font-light leading-relaxed text-on-surface">
+                    "True luxury is the ability to disconnect from the noise and reconnect with the soul."
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F0E8] dark:bg-[#1C1A17]">
+<div class="flex flex-col items-center justify-center text-center px-8 w-full py-24 border-t border-[#8A9E8C]/10">
+<div class="font-headline text-2xl tracking-[0.4em] mb-8 text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-12 max-w-3xl mx-auto" aria-label="Footer">
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../philosophy/index.html">Philosophy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../retreats/index.html">Retreats</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../journal/index.html">Journal</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../home/index.html#our-philosophy">About</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../membership/index.html">Membership</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../sustainability/index.html">Sustainability</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../contact/index.html">Contact</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="index.html">Inquire</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../privacy.html">Privacy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../terms.html">Terms</a>
+</nav>
+<p class="font-body font-light tracking-widest text-[10px] uppercase text-[#8A9E8C]">By invitation and inquiry only</p>
+</div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

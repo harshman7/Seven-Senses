@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e7e2da",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#243527",
+              "tertiary-fixed-dim": "#cbc5c0",
+              "tertiary-fixed": "#e7e1dc",
+              "secondary-container": "#fedb9b",
+              "inverse-on-surface": "#f5f0e8",
+              "tertiary": "#615e5a",
+              "on-tertiary-fixed-variant": "#494643",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#0e1f13",
+              "tertiary-container": "#9d9893",
+              "on-tertiary-container": "#33312d",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#434843",
+              "background": "#fef9f1",
+              "surface": "#fef9f1",
+              "surface-tint": "#506353",
+              "surface-dim": "#ded9d2",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdea4",
+              "surface-variant": "#e7e2da",
+              "on-surface": "#1d1c17",
+              "on-background": "#1d1c17",
+              "secondary": "#745a27",
+              "inverse-surface": "#32302b",
+              "surface-container-high": "#ece8e0",
+              "on-tertiary-fixed": "#1d1b18",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f8f3eb",
+              "primary-fixed-dim": "#b7ccb8",
+              "on-secondary-fixed-variant": "#5a4312",
+              "on-secondary-fixed": "#261900",
+              "on-primary-fixed-variant": "#394b3c",
+              "surface-bright": "#fef9f1",
+              "inverse-primary": "#b7ccb8",
+              "outline": "#737872",
+              "on-secondary-container": "#795f2b",
+              "primary-container": "#8a9e8c",
+              "surface-container": "#f2ede5",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#e4c285",
+              "primary-fixed": "#d3e8d4",
+              "primary": "#506353",
+              "on-error-container": "#93000a",
+              "outline-variant": "#c3c8c1"
+            },
+            fontFamily: {
+              "serif": ["Cormorant Garamond", "serif"],
+              "sans": ["Jost", "sans-serif"],
+              "headline": ["Cormorant Garamond"],
+              "body": ["Jost"],
+              "label": ["Jost"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 20px 40px rgba(29, 28, 23, 0.06);
+        }
+        .hairline-divider {
+            height: 1px;
+            background-color: #506353;
+            width: 90%;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-sans selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md" aria-label="Primary">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<a class="font-headline text-xl tracking-[0.3em] font-light text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html">SEVEN SENSES</a>
+<div class="hidden md:flex gap-10 items-center flex-wrap justify-end">
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../retreats/index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-100 border-b border-[#8A9E8C]/40 pb-0.5 hover:text-[#8A9E8C] transition-colors duration-500" href="index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../inquiry/index.html">Inquire</a>
+</div>
+<button type="button" class="md:hidden p-2 -mr-2 text-[#1C1A17] dark:text-[#F5F0E8]" data-ss-nav-toggle aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<div class="hidden md:hidden fixed inset-0 top-[5.5rem] z-40 flex-col items-center gap-8 pt-16 pb-12 bg-[#F5F0E8] dark:bg-[#1C1A17] border-t border-[#8A9E8C]/10 overflow-y-auto" data-ss-nav-panel>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../retreats/index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../inquiry/index.html">Inquire</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../privacy.html">Privacy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../terms.html">Terms</a>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-40">
+<div class="flex flex-col items-center text-center">
+<span class="font-sans text-xs uppercase tracking-[0.2rem] text-primary mb-6">Our Commitment</span>
+<h1 class="font-serif text-6xl md:text-8xl font-light leading-tight text-on-surface max-w-4xl">Stewards of the Stillness</h1>
+<div class="hairline-divider mt-16 mx-auto"></div>
+</div>
+</section>
+<!-- Asymmetric Intro Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-48 flex flex-col md:flex-row gap-20 items-end">
+<div class="w-full md:w-3/5">
+<img alt="Sunlight filtering through ancient forest canopy" class="w-full h-[716px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000" data-alt="Sunlight filtering through ancient forest canopy" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="w-full md:w-2/5 pb-12">
+<p class="font-serif italic text-3xl text-primary mb-8 leading-relaxed">"We do not inherit the earth from our ancestors; we borrow it from our children."</p>
+<p class="text-stone-600 font-sans font-light leading-relaxed text-lg">Seven Senses was founded on the belief that true luxury is inseparable from the health of our planet. Our sustainability portfolio is a living testament to our promise of radical transparency and deep ecological respect.</p>
+</div>
+</section>
+<!-- Carbon-Neutral Architecture Section -->
+<section class="bg-surface-container-low py-32 mb-48">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div>
+<span class="font-sans text-xs uppercase tracking-[0.15rem] text-secondary mb-4 block">Design Philosophy</span>
+<h2 class="font-serif text-5xl font-light mb-8 text-on-surface">Carbon-Neutral Architecture</h2>
+<p class="text-stone-600 font-sans font-light leading-relaxed mb-8 text-lg">Our structures are designed to whisper, not shout. By utilizing locally sourced timber, rammed earth, and passive solar design, our retreats achieve net-zero operational carbon within their first year. Every beam and stone is placed with surgical precision to ensure minimal disruption to the existing topography.</p>
+<a class="inline-block Jost uppercase tracking-widest text-xs font-light text-primary border-b border-primary/40 pb-2 hover:border-primary transition-all" href="../docs/technical-architecture.html">Download Technical Report</a>
+</div>
+<div class="relative">
+<img alt="Modern minimalist architecture blending with forest" class="w-full h-[600px] object-cover" data-alt="Modern minimalist architecture blending with forest" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+<div class="absolute -bottom-10 -left-10 bg-surface p-12 editorial-shadow hidden lg:block max-w-xs">
+<span class="text-secondary text-4xl font-serif italic block mb-2">0%</span>
+<p class="text-xs uppercase tracking-widest text-stone-500 leading-loose">Waste generated during the construction of our Nicoya sanctuary.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marine Conservation Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-48">
+<div class="flex flex-col items-center mb-24">
+<div class="hairline-divider mb-16"></div>
+<span class="font-sans text-xs uppercase tracking-[0.15rem] text-primary mb-4">Ecosystem Restoration</span>
+<h2 class="font-serif text-5xl font-light text-center">Marine Conservation in the Maldives</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-2">
+<img alt="Crystal clear ocean water with coral reefs" class="w-full h-[500px] object-cover" data-alt="Crystal clear ocean water with coral reefs" src="https://images.unsplash.com/photo-1583212292454-1fe62296026b?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="flex flex-col justify-center bg-surface-container py-12 px-10">
+<h3 class="font-serif text-2xl italic mb-6">The Blue Lung Project</h3>
+<p class="text-stone-600 font-sans font-light leading-relaxed text-sm mb-6">Our dedicated team of marine biologists works tirelessly to restore 15,000 square meters of coral reef. By implementing electrical mineral accretion technology, we have accelerated coral growth by 400% in our surrounding atolls.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4 text-xs uppercase tracking-widest text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+<span>Plastic-Free Private Islands</span>
+</li>
+<li class="flex items-start gap-4 text-xs uppercase tracking-widest text-primary">
+<span class="material-symbols-outlined">set_meal</span>
+<span>Sustainable Fishing Partnerships</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Costa Rica Section (Asymmetric Editorial) -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-64">
+<div class="flex flex-col md:flex-row gap-20">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<img alt="Tropical coastline and rainforest meeting the Pacific" class="w-full h-[700px] object-cover" data-alt="Tropical coastline and rainforest meeting the Pacific" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center order-1 md:order-2">
+<span class="font-sans text-xs uppercase tracking-[0.15rem] text-secondary mb-4">Cultural Heritage</span>
+<h2 class="font-serif text-5xl font-light mb-8">Community Preservation in Nicoya</h2>
+<p class="text-stone-600 font-sans font-light leading-relaxed text-lg mb-10">Beyond the coastline lies the spirit of the peninsula. In Costa Rica, Seven Senses supports local artisan cooperatives—ceramics, textiles, and cacao—so traditional craft stays alive as the region evolves. We don't just employ neighbors; we co-create experiences that honor their history.</p>
+<div class="grid grid-cols-2 gap-8 border-l border-primary/20 pl-8">
+<div>
+<span class="text-3xl font-serif text-primary">120+</span>
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mt-2">Local Artisans Supported</p>
+</div>
+<div>
+<span class="text-3xl font-serif text-primary">100%</span>
+<p class="text-[10px] uppercase tracking-widest text-stone-500 mt-2">Sourced within 50 miles</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Statement -->
+<section class="max-w-4xl mx-auto px-8 mb-48 text-center">
+<div class="hairline-divider mx-auto mb-20"></div>
+<h2 class="font-serif text-4xl font-light italic mb-12">"Every stay at Seven Senses is an investment in the earth's future."</h2>
+<a class="inline-block bg-primary-container text-on-primary-container px-12 py-6 Jost 300 uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all duration-500" href="../inquiry/index.html">
+                View Our 2024 Impact Report
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F0E8] dark:bg-[#1C1A17]">
+<div class="flex flex-col items-center justify-center text-center px-8 w-full py-24 border-t border-[#8A9E8C]/10">
+<div class="font-headline text-2xl tracking-[0.4em] mb-8 text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-12 max-w-3xl mx-auto" aria-label="Footer">
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../philosophy/index.html">Philosophy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../retreats/index.html">Retreats</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../journal/index.html">Journal</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../home/index.html#our-philosophy">About</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../membership/index.html">Membership</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="index.html">Sustainability</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../contact/index.html">Contact</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../inquiry/index.html">Inquire</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../privacy.html">Privacy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../terms.html">Terms</a>
+</nav>
+<p class="font-body font-light tracking-widest text-[10px] uppercase text-[#8A9E8C]">By invitation and inquiry only</p>
+</div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

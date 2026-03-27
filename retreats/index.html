@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffdea4",
+              "tertiary-fixed": "#e7e1dc",
+              "primary-container": "#8a9e8c",
+              "background": "#fef9f1",
+              "inverse-on-surface": "#f5f0e8",
+              "on-background": "#1d1c17",
+              "surface-container-high": "#ece8e0",
+              "surface-bright": "#fef9f1",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface": "#fef9f1",
+              "outline": "#737872",
+              "on-error": "#ffffff",
+              "on-surface-variant": "#434843",
+              "on-primary-container": "#243527",
+              "primary-fixed-dim": "#b7ccb8",
+              "on-surface": "#1d1c17",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fedb9b",
+              "surface-dim": "#ded9d2",
+              "on-primary-fixed": "#0e1f13",
+              "inverse-surface": "#32302b",
+              "secondary-fixed-dim": "#e4c285",
+              "on-secondary-container": "#795f2b",
+              "outline-variant": "#c3c8c1",
+              "surface-container-highest": "#e7e2da",
+              "on-secondary-fixed": "#261900",
+              "on-primary-fixed-variant": "#394b3c",
+              "surface-variant": "#e7e2da",
+              "surface-container": "#f2ede5",
+              "on-secondary-fixed-variant": "#5a4312",
+              "error-container": "#ffdad6",
+              "primary": "#506353",
+              "on-tertiary-fixed": "#1d1b18",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#cbc5c0",
+              "tertiary-container": "#9d9893",
+              "surface-tint": "#506353",
+              "surface-container-low": "#f8f3eb",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#494643",
+              "tertiary": "#615e5a",
+              "secondary": "#745a27",
+              "primary-fixed": "#d3e8d4",
+              "on-tertiary-container": "#33312d",
+              "inverse-primary": "#b7ccb8"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Jost", "sans-serif"],
+              "label": ["Jost", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #F5F0E8;
+      }
+      .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+      .font-jost { font-family: 'Jost', sans-serif; }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md" aria-label="Primary">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<a class="font-headline text-xl tracking-[0.3em] font-light text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html">SEVEN SENSES</a>
+<div class="hidden md:flex gap-10 items-center flex-wrap justify-end">
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-100 border-b border-[#8A9E8C]/40 pb-0.5 hover:text-[#8A9E8C] transition-colors duration-500" href="index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../sustainability/index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../inquiry/index.html">Inquire</a>
+</div>
+<button type="button" class="md:hidden p-2 -mr-2 text-[#1C1A17] dark:text-[#F5F0E8]" data-ss-nav-toggle aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<div class="hidden md:hidden fixed inset-0 top-[5.5rem] z-40 flex-col items-center gap-8 pt-16 pb-12 bg-[#F5F0E8] dark:bg-[#1C1A17] border-t border-[#8A9E8C]/10 overflow-y-auto" data-ss-nav-panel>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../membership/index.html">Membership</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../sustainability/index.html">Sustainability</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../inquiry/index.html">Inquire</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../privacy.html">Privacy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../terms.html">Terms</a>
+</div>
+</nav>
+<main class="pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-24 text-center">
+<h1 class="font-headline font-light text-6xl md:text-8xl text-on-surface mb-6 italic">Considered Destinations</h1>
+<p class="font-body font-light text-on-surface-variant max-w-xl mx-auto leading-relaxed text-lg">
+                A curated collection of sanctuaries designed for deep restoration and reconnection with the natural world.
+            </p>
+</header>
+<!-- Divider -->
+<div class="w-full h-px bg-primary/20 mb-24 max-w-4xl mx-auto"></div>
+<!-- Retreats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-32">
+<!-- Retreat 01: Bali -->
+<article class="group cursor-pointer">
+<a class="block text-inherit no-underline" href="bali/index.html">
+<div class="aspect-[2/3] overflow-hidden mb-8 bg-surface-container">
+<img alt="Tropical beach and turquoise water in Bali" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-jost font-light text-xs uppercase tracking-[0.3em] text-on-surface">Ubud, Bali</h3>
+<p class="font-headline font-light italic text-2xl text-primary">Warmth &amp; Water</p>
+<div class="w-8 h-px bg-primary/40 group-hover:w-full transition-all duration-700"></div>
+</div>
+</a>
+</article>
+<!-- Retreat 02: Costa Rica -->
+<article class="group cursor-pointer md:mt-24">
+<a class="block text-inherit no-underline" href="costa-rica/index.html">
+<div class="aspect-[2/3] overflow-hidden mb-8 bg-surface-container">
+<img alt="Tropical pool and jungle canopy in Costa Rica" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-jost font-light text-xs uppercase tracking-[0.3em] text-on-surface">Nicoya Peninsula</h3>
+<p class="font-headline font-light italic text-2xl text-primary">Rainforest &amp; Pacific</p>
+<div class="w-8 h-px bg-primary/40 group-hover:w-full transition-all duration-700"></div>
+</div>
+</a>
+</article>
+<!-- Retreat 03: Maldives -->
+<article class="group cursor-pointer">
+<a class="block text-inherit no-underline" href="maldives/index.html">
+<div class="aspect-[2/3] overflow-hidden mb-8 bg-surface-container">
+<img alt="Crystal clear Maldives waters" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-jost font-light text-xs uppercase tracking-[0.3em] text-on-surface">The Maldives</h3>
+<p class="font-headline font-light italic text-2xl text-primary">A Symphony of Azure</p>
+<div class="w-8 h-px bg-primary/40 group-hover:w-full transition-all duration-700"></div>
+</div>
+</a>
+</article>
+<!-- Retreat 04: Seychelles -->
+<article class="group cursor-pointer md:-mt-12">
+<a class="block text-inherit no-underline" href="../inquiry/index.html">
+<div class="aspect-[2/3] overflow-hidden mb-8 bg-surface-container">
+<img alt="Granite boulders and crystal water in the Seychelles" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-jost font-light text-xs uppercase tracking-[0.3em] text-on-surface">Mahé, Seychelles</h3>
+<p class="font-headline font-light italic text-2xl text-primary">Indian Ocean Hush</p>
+<div class="w-8 h-px bg-primary/40 group-hover:w-full transition-all duration-700"></div>
+</div>
+</a>
+</article>
+<!-- Retreat 05: French Polynesia -->
+<article class="group cursor-pointer">
+<a class="block text-inherit no-underline" href="../inquiry/index.html">
+<div class="aspect-[2/3] overflow-hidden mb-8 bg-surface-container">
+<img alt="Overwater bungalows and turquoise lagoon" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90"/>
+</div>
+<div class="space-y-4">
+<h3 class="font-jost font-light text-xs uppercase tracking-[0.3em] text-on-surface">Bora Bora</h3>
+<p class="font-headline font-light italic text-2xl text-primary">Lagoon Light</p>
+<div class="w-8 h-px bg-primary/40 group-hover:w-full transition-all duration-700"></div>
+</div>
+</a>
+</article>
+<!-- Decorative Content Block -->
+<article class="flex flex-col justify-center items-start px-8 md:mt-24">
+<span class="font-jost font-light text-[10px] uppercase tracking-[0.4em] text-secondary mb-8">The Philosophy</span>
+<p class="font-headline font-light text-3xl leading-relaxed italic text-on-surface">
+                    "Luxury is not the presence of things, but the absence of noise."
+                </p>
+<div class="mt-12">
+<a class="font-jost text-[10px] uppercase tracking-[0.15rem] border-b border-primary pb-2 text-on-surface hover:text-primary transition-colors duration-300" href="../philosophy/index.html">Explore Our Method</a>
+</div>
+</article>
+</section>
+<!-- Bottom Section Divider -->
+<div class="mt-32 w-full h-px bg-primary/20 max-w-4xl mx-auto"></div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F0E8] dark:bg-[#1C1A17]">
+<div class="flex flex-col items-center justify-center text-center px-8 w-full py-24 border-t border-[#8A9E8C]/10">
+<div class="font-headline text-2xl tracking-[0.4em] mb-8 text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-12 max-w-3xl mx-auto" aria-label="Footer">
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../philosophy/index.html">Philosophy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="index.html">Retreats</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../journal/index.html">Journal</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../home/index.html#our-philosophy">About</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../membership/index.html">Membership</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../sustainability/index.html">Sustainability</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../contact/index.html">Contact</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../inquiry/index.html">Inquire</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../privacy.html">Privacy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../terms.html">Terms</a>
+</nav>
+<p class="font-body font-light tracking-widest text-[10px] uppercase text-[#8A9E8C]">By invitation and inquiry only</p>
+</div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body></html>
