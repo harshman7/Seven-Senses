@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#cbc5c0",
+              "inverse-on-surface": "#f5f0e8",
+              "inverse-surface": "#32302b",
+              "on-primary-container": "#243527",
+              "on-tertiary-container": "#33312d",
+              "tertiary-fixed": "#e7e1dc",
+              "on-tertiary-fixed-variant": "#494643",
+              "on-tertiary-fixed": "#1d1b18",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#261900",
+              "secondary-container": "#fedb9b",
+              "outline-variant": "#c3c8c1",
+              "primary-container": "#8a9e8c",
+              "on-surface": "#1d1c17",
+              "background": "#fef9f1",
+              "on-secondary-fixed-variant": "#5a4312",
+              "on-primary-fixed-variant": "#394b3c",
+              "primary": "#506353",
+              "outline": "#737872",
+              "surface-container-low": "#f8f3eb",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f2ede5",
+              "surface-variant": "#e7e2da",
+              "error": "#ba1a1a",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#506353",
+              "surface-container-highest": "#e7e2da",
+              "on-surface-variant": "#434843",
+              "secondary": "#745a27",
+              "inverse-primary": "#b7ccb8",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "surface-bright": "#fef9f1",
+              "surface-container-high": "#ece8e0",
+              "on-secondary-container": "#795f2b",
+              "surface-dim": "#ded9d2",
+              "surface": "#fef9f1",
+              "on-background": "#1d1c17",
+              "tertiary-container": "#9d9893",
+              "on-primary-fixed": "#0e1f13",
+              "secondary-fixed-dim": "#e4c285",
+              "secondary-fixed": "#ffdea4",
+              "primary-fixed-dim": "#b7ccb8",
+              "primary-fixed": "#d3e8d4",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#615e5a"
+            },
+            fontFamily: {
+              "headline": ["Cormorant Garamond", "serif"],
+              "body": ["Jost", "sans-serif"],
+              "label": ["Jost", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #fef9f1;
+            color: #1d1c17;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 20px 40px rgba(29, 28, 23, 0.06);
+        }
+    </style>
+</head>
+<body class="font-body font-light">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F5F0E8]/80 dark:bg-[#1C1A17]/80 backdrop-blur-md" aria-label="Primary">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-screen-2xl mx-auto">
+<a class="font-headline text-xl tracking-[0.3em] font-light text-[#1C1A17] dark:text-[#F5F0E8]" href="../../home/index.html">SEVEN SENSES</a>
+<div class="hidden md:flex gap-10 items-center flex-wrap justify-end">
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-100 border-b border-[#8A9E8C]/40 pb-0.5 hover:text-[#8A9E8C] transition-colors duration-500" href="../index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8] opacity-80 hover:text-[#8A9E8C] transition-colors duration-500" href="../../inquiry/index.html">Inquire</a>
+</div>
+<button type="button" class="md:hidden p-2 -mr-2 text-[#1C1A17] dark:text-[#F5F0E8]" data-ss-nav-toggle aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+</div>
+<div class="hidden md:hidden fixed inset-0 top-[5.5rem] z-40 flex-col items-center gap-8 pt-16 pb-12 bg-[#F5F0E8] dark:bg-[#1C1A17] border-t border-[#8A9E8C]/10 overflow-y-auto" data-ss-nav-panel>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../philosophy/index.html">Philosophy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../index.html">Retreats</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../journal/index.html">Journal</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../home/index.html#our-philosophy">About</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../contact/index.html">Contact</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../inquiry/index.html">Inquire</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../privacy.html">Privacy</a>
+<a class="font-headline uppercase tracking-[0.2em] text-sm text-[#1C1A17] dark:text-[#F5F0E8]" href="../../terms.html">Terms</a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Pastel houses and steep coastline above the Mediterranean" class="w-full h-full object-cover" data-alt="Pastel houses and steep coastline above the Mediterranean" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90" fetchpriority="high" decoding="async"/>
+<div class="absolute inset-0 bg-stone-950/25"></div>
+</div>
+<div class="relative z-10 text-center text-white px-4">
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl font-light tracking-tight mb-4">Amalfi Coast, Italy</h1>
+<p class="font-headline italic text-2xl md:text-4xl font-light opacity-90">Cliffs, Citrus, and Unhurried Grace</p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
+<span class="font-body text-[10px] uppercase tracking-[0.3rem]">Scroll</span>
+<div class="w-[1px] h-12 bg-white/40"></div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-32 px-8 md:py-48 bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto text-center space-y-16">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary">A Mediterranean Retreat</span>
+<h2 class="font-headline text-4xl md:text-5xl italic leading-relaxed text-on-surface/90 px-4">
+                    "Where limestone meets salt air, time moves in the rhythm of bells, ferries, and the second espresso."
+                </h2>
+<div class="grid md:grid-cols-2 gap-12 text-left items-start max-w-3xl mx-auto">
+<p class="font-body text-on-surface-variant leading-relaxed font-light">
+                        The Amalfi Coast is vertical drama softened by daily ritual—lemons heavy on the branch, laundry catching light on a terrace, small boats tracing the sapphire band between rock and sky. We keep you above the crowds in private masserie and cliffside suites where the Tyrrhenian is always in view.
+                    </p>
+<p class="font-body text-on-surface-variant leading-relaxed font-light">
+                        Days wander from garden walks to slow swims, from a cellar tasting in the hills to a quiet hour with a book while the afternoon turns gold. This is European luxury as intimacy: fewer signatures, more continuity between you and the place.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Experience Highlights -->
+<section class="py-24 px-8 md:px-24">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<img alt="Stacked coastal village climbing a green hillside toward the sea" class="w-full h-full object-cover grayscale-[15%]" data-alt="Stacked coastal village climbing a green hillside toward the sea" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90" loading="lazy" decoding="async"/>
+</div>
+<div class="space-y-20">
+<div class="space-y-6">
+<span class="font-body font-light tracking-[0.15rem] text-[10px] uppercase text-primary/60 border-b border-primary/20 pb-2 inline-block">01</span>
+<h3 class="font-headline text-4xl font-light">Path &amp; Prospect</h3>
+<p class="font-body text-on-surface-variant font-light leading-relaxed">Guided walks along ancient stone routes—belvederes, stepped alleys, and open stretches where the horizon finally widens.</p>
+</div>
+<div class="space-y-6">
+<span class="font-body font-light tracking-[0.15rem] text-[10px] uppercase text-primary/60 border-b border-primary/20 pb-2 inline-block">02</span>
+<h3 class="font-headline text-4xl font-light">Garden &amp; Kitchen</h3>
+<p class="font-body text-on-surface-variant font-light leading-relaxed">Hands-on moments with local growers and chefs—oil, citrus, catch of the day—without turning nourishment into performance.</p>
+</div>
+<div class="space-y-6">
+<span class="font-body font-light tracking-[0.15rem] text-[10px] uppercase text-primary/60 border-b border-primary/20 pb-2 inline-block">03</span>
+<h3 class="font-headline text-4xl font-light">Sound &amp; Stillness</h3>
+<p class="font-body text-on-surface-variant font-light leading-relaxed">Evening listening sessions on the terrace: acoustic strings, sea noise, and silence left deliberately between movements.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Accommodations -->
+<section class="bg-surface-container-low py-32 px-8 md:px-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-20 text-center">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary mb-6 block">The Dwelling</span>
+<h2 class="font-headline text-5xl font-light tracking-tight">The Terrazza Experience</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-2 space-y-8">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="Sunlit terraces and pool overlooking layered hills" class="w-full h-full object-cover" data-alt="Sunlit terraces and pool overlooking layered hills" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90" loading="lazy" decoding="async"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<img alt="Blue water meeting rugged Italian shoreline" class="aspect-square object-cover" data-alt="Blue water meeting rugged Italian shoreline" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90" loading="lazy" decoding="async"/>
+<img alt="Soft twilight over a European city vista" class="aspect-square object-cover" data-alt="Soft twilight over a European city vista" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=90" loading="lazy" decoding="async"/>
+</div>
+</div>
+<div class="bg-white p-12 flex flex-col justify-center space-y-8 editorial-shadow">
+<h4 class="font-headline text-3xl italic">Elevated Intimacy</h4>
+<p class="font-body font-light text-on-surface-variant leading-loose text-sm">
+                            Your residence is carved into the cliff’s logic—limewashed walls, iron and linen, doors that open to a terrace wider than the room. Mornings belong to espresso and salt breeze; nights to low lamps and the muffled lift of waves far below.
+                        </p>
+<div class="space-y-4 pt-8 border-t border-stone-100">
+<div class="flex justify-between items-center text-[10px] tracking-widest uppercase font-body text-primary">
+<span>Privilege</span>
+<span>Private Terraces</span>
+</div>
+<div class="flex justify-between items-center text-[10px] tracking-widest uppercase font-body text-primary">
+<span>View</span>
+<span>Sea &amp; Cypress</span>
+</div>
+<div class="flex justify-between items-center text-[10px] tracking-widest uppercase font-body text-primary">
+<span>Dining</span>
+<span>Coastal Italian</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journey Details (The 7 Pillars) -->
+<section class="py-32 px-8 max-w-4xl mx-auto">
+<h2 class="font-headline text-4xl font-light text-center mb-24">The Seven Pillars of Stillness</h2>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Arrival</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">Naples to the Coast</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">Private transfer from Naples or Salerno to your cliffside residence, then aperitivi as the port lights flicker on.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Mind</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">Contemplative Pace</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">Guided journaling and seated practice framed by sea light—less instruction, more room to notice thought as weather passing.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Body</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">Coastal Renewal</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">Gentle movement at sunrise, swims from quiet coves, and bodywork with citrus and herb oils in an open salon.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Cuisine</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">The Island of Flavor</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">Menus anchored in Campanian seasons—mozzarella di bufala, anchovies, tomatoes still warm from the vine, local wine poured without sermon.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Ritual</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">Bell &amp; Marina</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">Evening passage through a hill town as bells mark the hour, and a candlelit dinner where courses follow conversation, not clocks.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8 border-b border-primary/10">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Nature</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">The Path of the Gods</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">A half-day hike along the sentiero alto when you wish for wind and distance—otherwise, a chartered boat and silence on open water.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-16 py-8">
+<span class="font-body font-light tracking-[0.2rem] text-xs uppercase text-primary w-24">Departure</span>
+<div class="flex-1">
+<h5 class="font-body font-medium text-sm mb-2">The Last Limoncello</h5>
+<p class="font-body font-light text-on-surface-variant text-sm">A closing toast on the terrace—gratitude spoken quietly before the coast folds away and the city resumes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-48 px-8 bg-surface-container-highest flex flex-col items-center text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-light mb-12 max-w-2xl">Begin your conversation on the Amalfi Coast.</h2>
+<a class="inline-block bg-primary hover:bg-on-primary-container text-white px-12 py-5 font-body font-light tracking-[0.2rem] text-xs uppercase transition-all duration-500 shadow-sm active:scale-[0.98]" href="../../inquiry/index.html">
+                Inquire for Invitation
+            </a>
+<p class="mt-12 font-body text-[10px] uppercase tracking-[0.15rem] text-on-surface-variant opacity-60">Limited to twelve guests per journey</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F0E8] dark:bg-[#1C1A17] mt-24">
+<div class="flex flex-col items-center justify-center text-center px-8 w-full py-24 border-t border-[#8A9E8C]/10">
+<div class="font-headline text-2xl tracking-[0.4em] mb-8 text-[#1C1A17] dark:text-[#F5F0E8]">SEVEN SENSES</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-12 max-w-3xl mx-auto" aria-label="Footer">
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../philosophy/index.html">Philosophy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../index.html">Retreats</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../journal/index.html">Journal</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../home/index.html#our-philosophy">About</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../contact/index.html">Contact</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../inquiry/index.html">Inquire</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../privacy.html">Privacy</a>
+<a class="font-body font-light tracking-widest text-xs uppercase text-[#1C1A17] dark:text-[#F5F0E8] opacity-60 hover:text-[#C9A96E] transition-all duration-700" href="../../terms.html">Terms</a>
+</nav>
+<p class="font-body font-light tracking-widest text-[10px] uppercase text-[#8A9E8C]">By invitation and inquiry only</p>
+</div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body></html>
